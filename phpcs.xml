@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <ruleset name="Custom Standard">
     <description>Custom coding standard based on PSR-2 and PSR-4</description>
-    <rule ref="PSR2"/>
-    <rule ref="PSR4"/>
+    <rule ref="PSR24"/>
 </ruleset>
