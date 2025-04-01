@@ -1,0 +1,32 @@
+name: PHP CodeSniffer
+
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 'latest'
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Install PHP CodeSniffer
+        run: composer global require "squizlabs/php_codesniffer=*"
+
+      - name: Run PHP CodeSniffer
+        id: phpcs
+        run: |
+          phpcs --standard=.github/phpcs.xml src/
+        continue-on-error: false
+
