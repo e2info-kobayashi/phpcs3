@@ -3,8 +3,11 @@
   "description": "A short description of your project",
   "require": {
     "php": "^7.4 || ^8.0",
-    "squizlabs/php_codesniffer": "^3.6",
     "phpcompatibility/php-compatibility": "*"
+  },
+  "require-dev": {
+    "suin/phpcs-psr4-sniff": "^1.0",
+    "squizlabs/php_codesniffer": "^3.6"
   },
   "autoload": {
     "psr-4": {
