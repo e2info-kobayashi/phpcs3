@@ -1,0 +1,12 @@
+{
+  "name": "e2info-kobayashi/phpcs3",
+  "description": "A short description of your project",
+  "require": {
+    "php": "^7.4 || ^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "e2info-kobayashi\\Phpcs3\\": "src/"
+    }
+  }
+}
